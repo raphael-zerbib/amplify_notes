@@ -1,0 +1,19 @@
+{
+    "AppSyncApiName": "Notes",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authNotes",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-notes-staging-165228-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/744d09c8d2af1b05b050f9c59fe61960004e5998"
+}

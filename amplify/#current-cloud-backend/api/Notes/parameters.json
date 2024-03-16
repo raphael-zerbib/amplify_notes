@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "Notes",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-03-16T13:46:55.944Z",
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authNotes",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
